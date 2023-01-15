@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  title: arogov
+  version: 1.0.0
+paths:
+  /:
+    get:
+      x-yc-apigateway-integration:
+        type: object_storage
+        bucket:             arogov
+        object:             index.html
+        presigned_redirect: false
+        service_account:    aje71r5t4uav7rgcb71q
+      operationId: static
+  /notes:
+    post:
+      x-yc-apigateway-integration:
+        type: serverless_containers
+        container_id: bba2fefntrt4hku7ua7t
+        service_account_id: aje71r5t4uav7rgcb71q
+      operationId: notes
+    get:
+      x-yc-apigateway-integration:
+        type: serverless_containers
+        container_id: bba2fefntrt4hku7ua7t
+        service_account_id: aje71r5t4uav7rgcb71q
+      operationId: notes
+  /version:
+    get:
+      x-yc-apigateway-integration:
+        type: serverless_containers
+        container_id: bba2fefntrt4hku7ua7t
+        service_account_id: aje71r5t4uav7rgcb71q
+      operationId: version
+  /js/main.js:
+    get:
+      x-yc-apigateway-integration:
+        type: object_storage
+        bucket: arogov
+        object: main.js
+        presigned_redirect: false
+        service_account: aje71r5t4uav7rgcb71q
+      operationId: static

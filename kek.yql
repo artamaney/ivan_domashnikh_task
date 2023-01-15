@@ -1,0 +1,9 @@
+CREATE table notes
+(
+note_id Utf8,
+author Utf8,
+title Utf8,
+text Utf8,
+created_at Datetime,
+PRIMARY KEY (note_id));
+COMMIT;
