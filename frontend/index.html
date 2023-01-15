@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="meta-info">
+        <p>Версия фронтенда: <span class="frontend-version">0.0.0</span></p>
+        <p>Версия реплики бекенда: <span class="backend-version">0.0.0</span></p>
+    </div>
+    <h1>Общий дневник</h1>
+    <ul class="notes-list">
+        <!-- 
+            <li class="notes-item">
+                <h2 class="notes-item-title">Some title1</h2>
+                <p class="notes-item-author">Author</p>
+                <p class="notes-item-text">Some text1</p>
+                <i class="notes-item-created-at"></i>
+            </li> 
+        -->
+    </ul>        
+
+    <form class="notes-add-form">
+        <label>
+            Имя автора:
+            <input type="text" name="author">
+        </label>
+        <br>
+        <label>
+            Тема заметки:
+            <input type="text" name="title">
+        </label>
+        <br>
+        <label>
+            Содержание заметки:
+            <textarea name="text" cols="30" rows="10"></textarea>
+        </label>
+        <br>
+        <button>Добавить заметку</button>
+    </form>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
